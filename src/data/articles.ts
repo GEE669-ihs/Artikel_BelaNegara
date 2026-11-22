@@ -36,6 +36,11 @@ export const articles: Article[] = [
         author: 'Refleksi Studi Ekskursi Informatika',
       },
       {
+        type: 'image',
+        src: '/images/studi-ekskursi-indoor.jpg',
+        caption: 'Mahasiswa Informatika UPN "Veteran" Jawa Timur saat menyimak pemaparan operasional sistem dan infrastruktur industri di aula PT Petrokimia Gresik.',
+      },
+      {
         type: 'heading',
         text: 'Konektivitas Digital dan Ketahanan Komunikasi',
       },

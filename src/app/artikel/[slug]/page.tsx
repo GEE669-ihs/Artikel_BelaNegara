@@ -228,6 +228,26 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     </div>
                   );
                 }
+                if (block.type === 'image' && block.src) {
+                  return (
+                    <figure key={index} className="my-8">
+                      <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-gray-100 border border-gray-200 shadow-md">
+                        <Image
+                          src={block.src}
+                          alt={block.caption || 'Dokumentasi kegiatan'}
+                          fill
+                          sizes="(max-width: 896px) 100vw, 800px"
+                          className="object-cover"
+                        />
+                      </div>
+                      {block.caption && (
+                        <figcaption className="mt-2.5 text-center text-xs text-ink-500 italic">
+                          Foto: {block.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  );
+                }
                 return (
                   <p key={index} className="leading-relaxed">
                     {block.text}

@@ -5,9 +5,11 @@ export interface ArticleAuthor {
 }
 
 export interface ContentBlock {
-  type: 'paragraph' | 'heading' | 'quote' | 'highlight';
-  text: string;
+  type: 'paragraph' | 'heading' | 'quote' | 'highlight' | 'image';
+  text?: string;
   author?: string;
+  src?: string;
+  caption?: string;
 }
 
 export interface Article {
