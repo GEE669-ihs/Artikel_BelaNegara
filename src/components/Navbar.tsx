@@ -3,14 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Shield, Search, Send, Calendar } from 'lucide-react';
+import { Menu, X, Shield, PenTool, Sparkles, BookOpen } from 'lucide-react';
 
-const categories = [
-  { name: 'Beranda', href: '/' },
+const navItems = [
+  { name: 'Semua Artikel', href: '/' },
   { name: 'Wawasan Kebangsaan', href: '/kategori/wawasan-kebangsaan' },
   { name: 'Generasi Muda', href: '/kategori/generasi-muda' },
-  { name: 'Digital', href: '/kategori/digital' },
-  { name: 'Lingkungan', href: '/kategori/lingkungan' },
+  { name: 'Digital & Siber', href: '/kategori/digital' },
+  { name: 'Lingkungan Hidup', href: '/kategori/lingkungan' },
 ];
 
 export default function Navbar() {
@@ -20,58 +20,62 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Banner Ticker */}
-      <div className="bg-patriot-900 text-white text-xs py-2 px-4 border-b border-patriot-950">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2">
-          <div className="flex items-center gap-2 overflow-hidden">
-            <span className="bg-patriot-600 text-white font-bold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase shrink-0">
-              Terkini
-            </span>
-            <Link
-              href="/artikel/studi-ekskursi-ke-petrokimia-gresik-dan-indosat-cara-mahasiswa-informatika-membela-negara"
-              className="text-gray-200 hover:text-white truncate transition-colors"
-            >
-              Generasi Muda: Studi Ekskursi ke Petrokimia Gresik dan Indosat Ooredoo Hutchison
-            </Link>
+      {/* Top Journal Metadata Bar */}
+      <div className="bg-patriot-950 text-patriot-200 text-[11px] py-1.5 px-4 border-b border-patriot-900">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1">
+          <div className="flex items-center gap-2">
+            <span className="font-semibold text-white">Edisi 2026</span>
+            <span>•</span>
+            <span>Surabaya, Jawa Timur</span>
+            <span>•</span>
+            <span className="text-patriot-400">Minggu, 22 November 2026</span>
           </div>
-          <div className="flex items-center gap-1.5 text-patriot-200 text-[11px] shrink-0">
-            <Calendar className="w-3.5 h-3.5" />
-            <span>Minggu, 22 November 2026</span>
+          <div className="flex items-center gap-2 text-patriot-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Publikasi Praktikum Bela Negara UPN &quot;Veteran&quot; Jatim</span>
           </div>
         </div>
       </div>
 
-      {/* Main Navbar */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-lg bg-patriot-700 flex items-center justify-center text-white shadow-sm group-hover:bg-patriot-800 transition-colors">
-                <Shield className="w-6 h-6 fill-patriot-50 text-patriot-100" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif font-bold text-xl md:text-2xl text-patriot-900 leading-tight tracking-tight">
-                  Bela Negara
+      {/* Main Journal Masthead (Distinct Editorial Header) */}
+      <div className="bg-white border-b border-gray-200 py-6 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <div className="flex flex-col items-center justify-center">
+            <Link href="/" className="group inline-flex flex-col items-center">
+              <div className="flex items-center gap-2.5 mb-2">
+                <span className="h-[1px] w-8 md:w-16 bg-patriot-700" />
+                <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-patriot-800">
+                  Jurnal Independen Mahasiswa
                 </span>
-                <span className="text-[10px] tracking-[0.2em] font-semibold text-patriot-600 uppercase">
-                  Media Mahasiswa
-                </span>
+                <span className="h-[1px] w-8 md:w-16 bg-patriot-700" />
               </div>
+              <h1 className="font-serif font-black text-3xl sm:text-5xl md:text-6xl text-ink-900 tracking-tight leading-none group-hover:text-patriot-900 transition-colors">
+                SIVITAS BELA NEGARA
+              </h1>
+              <p className="mt-2 text-xs sm:text-sm text-ink-500 max-w-xl font-serif italic">
+                Meneguhkan Nilai Kebangsaan Melalui Intelektualitas, Riset, dan Aksi Nyata
+              </p>
             </Link>
+          </div>
+        </div>
+      </div>
 
+      {/* Sticky Category Navigation Strip */}
+      <header className="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-14">
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-1" aria-label="Menu Utama">
-              {categories.map((item) => {
+            <nav className="hidden md:flex items-center space-x-1" aria-label="Menu Utama">
+              {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`px-3.5 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
                       isActive
-                        ? 'text-patriot-800 bg-patriot-50 font-semibold'
-                        : 'text-ink-700 hover:text-patriot-700 hover:bg-gray-50'
+                        ? 'text-white bg-patriot-800 shadow-sm'
+                        : 'text-ink-700 hover:text-patriot-900 hover:bg-gray-100'
                     }`}
                   >
                     {item.name}
@@ -80,111 +84,100 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Right Action Buttons */}
-            <div className="hidden sm:flex items-center gap-3">
+            {/* Mobile Title & Menu Toggle */}
+            <div className="flex items-center md:hidden">
+              <span className="font-serif font-bold text-sm text-patriot-900">
+                SIVITAS BELA NEGARA
+              </span>
+            </div>
+
+            {/* Right Action: Kirim Opini */}
+            <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => setModalOpen(true)}
-                className="inline-flex items-center gap-2 px-4 py-2 border border-patriot-700 text-patriot-800 hover:bg-patriot-50 rounded-lg text-sm font-semibold transition-colors"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-patriot-800 hover:bg-patriot-900 text-white rounded-full text-xs font-semibold transition-colors shadow-sm"
                 aria-label="Kirim artikel untuk redaksi"
               >
-                <Send className="w-4 h-4" />
-                Kirim Artikel
+                <PenTool className="w-3.5 h-3.5" />
+                <span>Kirim Opini</span>
               </button>
-            </div>
 
-            {/* Mobile menu button */}
-            <div className="flex items-center lg:hidden">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-md text-ink-700 hover:text-patriot-800 hover:bg-gray-100 focus:outline-none"
-                aria-label={mobileMenuOpen ? 'Tutup navigasi' : 'Buka navigasi'}
-                aria-expanded={mobileMenuOpen}
+                className="md:hidden p-1.5 rounded-md text-ink-700 hover:bg-gray-100"
+                aria-label="Buka navigasi mobile"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-lg">
-            {categories.map((item) => {
+          <div className="md:hidden border-t border-gray-200 bg-white px-4 py-4 space-y-1 shadow-lg">
+            {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-3 py-2.5 rounded-md text-base font-medium transition-colors ${
+                  className={`block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-patriot-800 bg-patriot-50 font-semibold'
-                      : 'text-ink-700 hover:text-patriot-700 hover:bg-gray-50'
+                      ? 'text-white bg-patriot-800 font-semibold'
+                      : 'text-ink-700 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
                 </Link>
               );
             })}
-            <div className="pt-4 border-t border-gray-100">
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setModalOpen(true);
-                }}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-patriot-700 text-white rounded-lg text-sm font-semibold hover:bg-patriot-800 transition-colors"
-              >
-                <Send className="w-4 h-4" />
-                Kirim Artikel
-              </button>
-            </div>
           </div>
         )}
       </header>
 
-      {/* Submission Information Modal */}
+      {/* Info Modal */}
       {modalOpen && (
         <div
           className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="modal-title"
         >
-          <div className="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+          <div className="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-gray-100">
             <button
               type="button"
               onClick={() => setModalOpen(false)}
               className="absolute top-5 right-5 p-1 rounded-full text-gray-400 hover:text-gray-600 hover:bg-gray-100"
-              aria-label="Tutup jendela informasi"
+              aria-label="Tutup modal"
             >
               <X className="w-5 h-5" />
             </button>
             <div className="w-12 h-12 rounded-xl bg-patriot-100 text-patriot-800 flex items-center justify-center mb-4">
-              <Shield className="w-6 h-6" />
+              <BookOpen className="w-6 h-6" />
             </div>
-            <h3 id="modal-title" className="text-xl font-serif font-bold text-ink-900 mb-2">
-              Kirim Naskah Bela Negara
+            <h3 className="text-xl font-serif font-bold text-ink-900 mb-2">
+              Kirim Naskah Mahasiswa
             </h3>
             <p className="text-sm text-ink-600 mb-4 leading-relaxed">
-              Portal ini memfasilitasi publikasi karya tulis, esai opini, dan laporan kegiatan bertema Bela Negara bagi mahasiswa UPN &quot;Veteran&quot; Jawa Timur.
+              Portal Sivitas Bela Negara menerima karya tulis orisinal mahasiswa berupa artikel opini, laporan kegiatan lapangan, atau esai refleksi kebangsaan.
             </p>
-            <div className="bg-gray-50 rounded-xl p-4 border border-gray-200 mb-6 space-y-2 text-xs text-ink-700">
-              <p><strong>Ketentuan Naskah:</strong></p>
-              <ul className="list-disc list-inside space-y-1">
-                <li>Tema: Wawasan Kebangsaan, Kepemudaan, Teknologi Digital, atau Lingkungan.</li>
-                <li>Panjang artikel: 400 hingga 800 kata.</li>
-                <li>Wajib menyertakan dokumentasi kegiatan asli yang orisinal.</li>
+            <div className="bg-paper rounded-xl p-4 border border-gray-200 mb-6 space-y-2 text-xs text-ink-700">
+              <p className="font-bold text-ink-900">Ketentuan Umum:</p>
+              <ul className="list-disc list-inside space-y-1 text-ink-600">
+                <li>Tema: Bela negara, kebangsaan, teknologi, lingkungan, atau etika pemuda.</li>
+                <li>Menyertakan dokumentasi foto asli mahasiswa di lapangan.</li>
+                <li>Bebas dari plagiarisme dan ujaran kebencian.</li>
               </ul>
             </div>
             <button
               type="button"
               onClick={() => setModalOpen(false)}
-              className="w-full py-2.5 bg-patriot-700 text-white font-semibold rounded-lg hover:bg-patriot-800 transition-colors text-sm"
+              className="w-full py-2.5 bg-patriot-800 text-white font-semibold rounded-lg hover:bg-patriot-900 transition-colors text-sm"
             >
-              Mengerti &amp; Lanjutkan Membaca
+              Tutup &amp; Lanjutkan Membaca
             </button>
           </div>
         </div>

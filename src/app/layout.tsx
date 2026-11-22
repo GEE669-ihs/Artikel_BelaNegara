@@ -5,11 +5,12 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://belanegara-media.vercel.app'),
-  title: 'Bela Negara Media | Wawasan, Aksi, dan Karakter Mahasiswa',
+  title: 'Sivitas Bela Negara | Jurnal Independen Mahasiswa UPN Veteran Jatim',
   description:
-    'Portal publikasi artikel dan dokumentasi aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
+    'Portal warta dan jurnal independen aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
   keywords: [
     'Bela Negara',
+    'Sivitas Bela Negara',
     'UPN Veteran Jawa Timur',
     'Informatika',
     'Wawasan Kebangsaan',
@@ -19,9 +20,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mahasiswa Informatika UPN Veteran Jatim' }],
   openGraph: {
-    title: 'Bela Negara Media | Wawasan, Aksi, dan Karakter Mahasiswa',
+    title: 'Sivitas Bela Negara | Jurnal Independen Mahasiswa',
     description:
-      'Portal publikasi artikel dan dokumentasi aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
+      'Portal warta dan jurnal independen aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
     type: 'website',
     locale: 'id_ID',
   },
