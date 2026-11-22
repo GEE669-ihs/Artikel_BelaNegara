@@ -28,9 +28,6 @@ export default function Footer() {
           <p className="text-ink-500">
             Mahasiswa Program Studi Informatika, Fakultas Ilmu Komputer, UPN &quot;Veteran&quot; Jawa Timur, Surabaya
           </p>
-          <p className="text-ink-400 text-[11px] pt-1">
-            Diterbitkan untuk memenuhi luaran tugas Mata Kuliah Wajib Kurikulum (MKWK) Bela Negara.
-          </p>
         </div>
 
         <p className="text-ink-400 text-[11px]">

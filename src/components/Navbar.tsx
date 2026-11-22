@@ -10,7 +10,6 @@ const navItems = [
   { name: 'Generasi Muda', href: '/kategori/generasi-muda' },
   { name: 'Digital', href: '/kategori/digital' },
   { name: 'Lingkungan', href: '/kategori/lingkungan' },
-  { name: 'Konsep Bela Negara', href: '/tentang-bela-negara' },
 ];
 
 export default function Navbar() {
