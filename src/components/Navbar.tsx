@@ -10,6 +10,7 @@ const navItems = [
   { name: 'Generasi Muda', href: '/kategori/generasi-muda' },
   { name: 'Digital', href: '/kategori/digital' },
   { name: 'Lingkungan', href: '/kategori/lingkungan' },
+  { name: 'Konsep Bela Negara', href: '/tentang-bela-negara' },
 ];
 
 export default function Navbar() {
@@ -34,7 +35,7 @@ export default function Navbar() {
       <nav className="border-t border-gray-100 py-3" aria-label="Navigasi Utama">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Desktop Links */}
-          <div className="hidden sm:flex items-center justify-center w-full space-x-6 text-xs sm:text-sm font-medium">
+          <div className="hidden md:flex items-center justify-center w-full space-x-6 text-xs sm:text-sm font-medium">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -54,7 +55,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="sm:hidden flex items-center justify-between w-full">
+          <div className="md:hidden flex items-center justify-between w-full">
             <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
               Menu Navigasi
             </span>
@@ -64,14 +65,14 @@ export default function Navbar() {
               className="text-xs font-semibold text-emerald-900 py-1 px-2.5 rounded border border-gray-300"
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? 'Tutup' : 'Kategori'}
+              {mobileMenuOpen ? 'Tutup' : 'Menu'}
             </button>
           </div>
         </div>
 
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <div className="sm:hidden border-t border-gray-100 px-4 pt-3 pb-2 space-y-2 bg-gray-50">
+          <div className="md:hidden border-t border-gray-100 px-4 pt-3 pb-2 space-y-2 bg-gray-50">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (

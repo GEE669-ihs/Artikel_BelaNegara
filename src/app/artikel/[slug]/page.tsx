@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { articles, getArticleBySlug } from '@/data/articles';
 import ReadingProgressBar from '@/components/ReadingProgressBar';
 import ShareButtons from '@/components/ShareButtons';
+import ArticleReader from '@/components/ArticleReader';
 
 interface ArticlePageProps {
   params: Promise<{
@@ -62,7 +63,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <ReadingProgressBar />
       <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10 md:py-16">
         {/* Navigation Link Back */}
-        <div className="mb-8">
+        <div className="mb-8 print:hidden">
           <Link
             href="/"
             className="text-xs font-semibold text-emerald-900 hover:underline"
@@ -72,7 +73,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         </div>
 
         {/* Article Header */}
-        <header className="mb-10">
+        <header className="mb-8">
           <div className="text-xs font-semibold uppercase tracking-wider text-emerald-900 mb-2">
             {article.category}
           </div>
@@ -97,7 +98,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         </header>
 
         {/* Main Photograph */}
-        <figure className="mb-10">
+        <figure className="mb-8">
           <div className="relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-gray-100">
             <Image
               src={article.image}
@@ -115,75 +116,12 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           )}
         </figure>
 
-        {/* Article Body */}
-        <article className="space-y-6 text-gray-800 text-base sm:text-lg leading-relaxed font-sans">
-          {article.content.map((block, index) => {
-            if (block.type === 'heading') {
-              return (
-                <h2
-                  key={index}
-                  className="font-serif font-bold text-2xl text-gray-900 pt-6 pb-2 border-b border-gray-100 mt-8"
-                >
-                  {block.text}
-                </h2>
-              );
-            }
-            if (block.type === 'quote') {
-              return (
-                <blockquote
-                  key={index}
-                  className="my-8 pl-5 border-l-2 border-emerald-800 italic font-serif text-gray-800 text-lg sm:text-xl leading-relaxed"
-                >
-                  &ldquo;{block.text}&rdquo;
-                  {block.author && (
-                    <cite className="block text-xs font-sans font-semibold text-gray-500 not-italic mt-2">
-                      ({block.author})
-                    </cite>
-                  )}
-                </blockquote>
-              );
-            }
-            if (block.type === 'highlight') {
-              return (
-                <div
-                  key={index}
-                  className="my-6 p-4 bg-gray-50 border-l-2 border-gray-400 text-gray-700 text-sm sm:text-base leading-relaxed"
-                >
-                  {block.text}
-                </div>
-              );
-            }
-            if (block.type === 'image' && block.src) {
-              return (
-                <figure key={index} className="my-8">
-                  <div className="relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-gray-100">
-                    <Image
-                      src={block.src}
-                      alt={block.caption || 'Dokumentasi kegiatan'}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 768px"
-                      className="object-cover"
-                    />
-                  </div>
-                  {block.caption && (
-                    <figcaption className="mt-2 text-center text-xs text-gray-500 italic">
-                      Dokumentasi: {block.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              );
-            }
-            return (
-              <p key={index} className="leading-relaxed">
-                {block.text}
-              </p>
-            );
-          })}
-        </article>
+        {/* Article Body with Reader Controls */}
+        <ArticleReader content={article.content} />
 
         {/* Tags */}
         {article.tags && article.tags.length > 0 && (
-          <div className="mt-10 pt-6 border-t border-gray-200 text-xs text-gray-500 flex flex-wrap items-center gap-2">
+          <div className="mt-10 pt-6 border-t border-gray-200 text-xs text-gray-500 flex flex-wrap items-center gap-2 print:hidden">
             <span className="font-semibold text-gray-700">Kata Kunci:</span>
             {article.tags.map((tag) => (
               <span key={tag} className="text-gray-600">
@@ -194,30 +132,43 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         )}
 
         {/* Share Buttons */}
-        <div className="mt-6">
+        <div className="mt-6 print:hidden">
           <ShareButtons title={article.title} slug={article.slug} />
         </div>
 
-        {/* Related Articles Clean List */}
-        <section className="mt-16 pt-10 border-t border-gray-200">
-          <h3 className="font-serif font-bold text-xl text-gray-900 mb-6">
+        {/* Related Articles with Thumbnails/Images */}
+        <section className="mt-16 pt-10 border-t border-gray-200 print:hidden">
+          <h3 className="font-serif text-2xl font-bold text-gray-900 mb-6">
             Artikel Bela Negara Lainnya
           </h3>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {relatedArticles.map((rel) => (
-              <div key={rel.id} className="pb-4 border-b border-gray-100 last:border-b-0">
-                <span className="text-[11px] font-semibold text-emerald-900 uppercase tracking-wider block mb-1">
-                  {rel.category}
-                </span>
+              <div key={rel.id} className="group flex flex-col space-y-3">
                 <Link
                   href={`/artikel/${rel.slug}`}
-                  className="font-serif font-bold text-base text-gray-900 hover:text-emerald-900 transition-colors leading-snug block"
+                  className="block relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-gray-100"
                 >
-                  {rel.title}
+                  <Image
+                    src={rel.image}
+                    alt={rel.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 240px"
+                    className="object-cover group-hover:opacity-90 transition-opacity"
+                  />
                 </Link>
-                <span className="text-xs text-gray-500 mt-1 block">
-                  {rel.date} • {rel.readTime}
-                </span>
+                <div>
+                  <span className="text-[10px] font-semibold text-emerald-900 uppercase tracking-wider block mb-1">
+                    {rel.category}
+                  </span>
+                  <h4 className="font-serif font-bold text-sm text-gray-900 group-hover:text-emerald-900 transition-colors leading-snug line-clamp-2">
+                    <Link href={`/artikel/${rel.slug}`}>
+                      {rel.title}
+                    </Link>
+                  </h4>
+                  <span className="text-xs text-gray-500 mt-1 block">
+                    {rel.date}
+                  </span>
+                </div>
               </div>
             ))}
           </div>

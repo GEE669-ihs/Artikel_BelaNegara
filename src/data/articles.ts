@@ -1,22 +1,24 @@
 import { Article } from '@/types/article';
 
+const defaultAuthor = {
+  name: 'Gian Ridho Firdaus dan Dimas Rahmanda Alfarizi',
+  role: 'Tim Redaksi Mahasiswa',
+  institution: "Mahasiswa UPN 'Veteran' Jawa Timur, Surabaya",
+};
+
 export const articles: Article[] = [
   {
     id: 'studi-ekskursi-petrokimia-gresik',
     slug: 'studi-ekskursi-ke-petrokimia-gresik-dan-indosat-cara-mahasiswa-informatika-membela-negara',
     title: 'Studi Ekskursi ke Petrokimia Gresik dan Indosat: Cara Mahasiswa Informatika Membela Negara',
     category: 'Generasi Muda',
-    date: '11 Nov 2026',
+    date: '28 Oktober 2026',
     readTime: '3 menit baca',
     image: '/images/studi-ekskursi.jpg',
     imageCaption: 'Mahasiswa Informatika UPN "Veteran" Jawa Timur berfoto bersama dalam kegiatan Studi Ekskursi ke PT Petrokimia Gresik dan Indosat Ooredoo Hutchison.',
     excerpt: 'Lewat Studi Ekskursi 2026 ke PT Petrokimia Gresik dan Indosat, mahasiswa Informatika UPN "Veteran" Jawa Timur belajar menopang industri nasional.',
     tags: ['Informatika', 'Industri Nasional', 'Bela Negara', 'Studi Ekskursi', 'Kedaulatan Teknologi'],
-    author: {
-      name: 'Tim Redaksi Mahasiswa',
-      role: 'Mahasiswa Informatika',
-      institution: 'UPN "Veteran" Jawa Timur',
-    },
+    author: defaultAuthor,
     content: [
       {
         type: 'paragraph',
@@ -68,17 +70,13 @@ export const articles: Article[] = [
     slug: 'menyusuri-jejak-sejarah-kunjungan-ke-museum-sepuluh-nopember-sebagai-wujud-bela-negara',
     title: 'Menyusuri Jejak Sejarah: Kunjungan ke Museum Sepuluh Nopember sebagai Wujud Bela Negara',
     category: 'Wawasan Kebangsaan',
-    date: '9 Nov 2026',
+    date: '8 November 2026',
     readTime: '3 menit baca',
     image: '/images/museum-sepuluh-nopember.jpg',
     imageCaption: 'Mahasiswa UPN "Veteran" Jawa Timur saat mengunjungi Museum Sepuluh Nopember di kompleks Monumen Tugu Pahlawan Surabaya.',
     excerpt: 'Kunjungan ke Museum Sepuluh Nopember Surabaya bukan sekadar wisata, melainkan ruang refleksi mahasiswa untuk menyerap nilai pengorbanan dan bela negara.',
     tags: ['Wawasan Kebangsaan', 'Sejarah Perjuangan', 'Arek Suroboyo', 'Tugu Pahlawan', 'Nilai Patriotisme'],
-    author: {
-      name: 'Tim Redaksi Mahasiswa',
-      role: 'Mahasiswa Informatika',
-      institution: 'UPN "Veteran" Jawa Timur',
-    },
+    author: defaultAuthor,
     content: [
       {
         type: 'paragraph',
@@ -125,18 +123,14 @@ export const articles: Article[] = [
     slug: 'outbound-bela-negara-saat-nilai-kebangsaan-diuji-di-luar-kelas',
     title: 'Outbound Bela Negara: Saat Nilai Kebangsaan Diuji di Luar Kelas',
     category: 'Generasi Muda',
-    date: '2 Nov 2026',
+    date: '27 Oktober 2026',
     readTime: '3 menit baca',
     image: '/images/outbound-bela-negara.jpg',
     imageCaption: 'Foto bersama seluruh mahasiswa dan instruktur praktikum Outbound Bela Negara UPN "Veteran" Jawa Timur dengan seragam lapangan lengkap.',
     excerpt: 'Di UPN "Veteran" Jawa Timur, praktikum Bela Negara tidak berhenti di kelas. Lewat outbound, nilai yang biasanya dihafal harus benar-benar dipraktikkan.',
     tags: ['Outbound', 'Karakter', 'Disiplin', 'Kerjasama Tim', 'Kampus Bela Negara'],
     popularRank: 1,
-    author: {
-      name: 'Tim Redaksi Mahasiswa',
-      role: 'Mahasiswa Informatika',
-      institution: 'UPN "Veteran" Jawa Timur',
-    },
+    author: defaultAuthor,
     content: [
       {
         type: 'paragraph',
@@ -183,18 +177,14 @@ export const articles: Article[] = [
     slug: 'cek-dulu-baru-bagikan-literasi-digital-sebagai-bentuk-bela-negara',
     title: 'Cek Dulu, Baru Bagikan: Literasi Digital sebagai Bentuk Bela Negara',
     category: 'Digital',
-    date: '15 Nov 2026',
+    date: '1 November 2026',
     readTime: '3 menit baca',
     image: '/images/literasi-digital.jpg',
     imageCaption: 'Ketajaman literasi digital dan verifikasi data menjadi benteng pertahanan intelektual mahasiswa di era luapan informasi.',
     excerpt: 'Menjaga kedaulatan bangsa hari ini tidak lagi sebatas menjaga perbatasan teritorial, melainkan juga menjaga ruang siber dari gempuran hoaks dan polarisasi sosial.',
     tags: ['Literasi Digital', 'Anti Hoaks', 'Keamanan Siber', 'Etika Bermedsos', 'Ruang Digital'],
     popularRank: 2,
-    author: {
-      name: 'Tim Redaksi Mahasiswa',
-      role: 'Mahasiswa Informatika',
-      institution: 'UPN "Veteran" Jawa Timur',
-    },
+    author: defaultAuthor,
     content: [
       {
         type: 'paragraph',
@@ -236,18 +226,14 @@ export const articles: Article[] = [
     slug: 'belajar-dari-mangrove-wonorejo-merawat-lingkungan-juga-bela-negara',
     title: 'Belajar dari Mangrove Wonorejo: Merawat Lingkungan juga Bela Negara',
     category: 'Lingkungan',
-    date: '18 Nov 2026',
+    date: '21 November 2026',
     readTime: '3 menit baca',
     image: '/images/mangrove-wonorejo.jpg',
     imageCaption: 'Aksi pelestarian kawasan hutan mangrove di Wonorejo Rungkut Surabaya sebagai ikhtiar menjaga garis pantai dan ekosistem bumi nusantara.',
     excerpt: 'Membela negara berarti menjaga tanah dan air secara harfiah. Aksi konservasi di pesisir timur Surabaya menjadi bukti bahwa kepedulian ekologis adalah bagian tak terpisahkan dari cinta tanah air.',
     tags: ['Lingkungan Hidup', 'Mangrove Wonorejo', 'Konservasi Surabaya', 'Aksi Ekologis', 'Bumi Nusantara'],
     popularRank: 4,
-    author: {
-      name: 'Tim Redaksi Mahasiswa',
-      role: 'Mahasiswa Informatika',
-      institution: 'UPN "Veteran" Jawa Timur',
-    },
+    author: defaultAuthor,
     content: [
       {
         type: 'paragraph',
@@ -284,6 +270,126 @@ export const articles: Article[] = [
       },
     ],
   },
+  {
+    id: 'kantin-satria-wimaya',
+    slug: 'kantin-satria-wimaya-wajah-baru-ruang-interaksi-dan-karakter-mahasiswa-upn-jatim',
+    title: 'Kantin Satria Wimaya: Wajah Baru Ruang Interaksi dan Karakter Mahasiswa UPN Jatim',
+    category: 'Generasi Muda',
+    date: '15 November 2026',
+    readTime: '3 menit baca',
+    image: '/images/kantin-satria-wimaya.jpg',
+    imageCaption: 'Gedung Kantin Satria Wimaya UPN "Veteran" Jawa Timur sebagai ruang interaksi dan pembentukan karakter disiplin mahasiswa.',
+    excerpt: 'Kantin Satria Wimaya menjadi ruang temu sivitas akademika UPN Jatim. Di balik kenyamanan fasilitasnya, tersimpan ruang penempaan etika antre, kejujuran, dan kebersihan sebagai wujud dasar bela negara.',
+    tags: ['Kantin Satria Wimaya', 'Karakter Mahasiswa', 'Budaya Antre', 'Etika Kampus', 'Integritas'],
+    author: defaultAuthor,
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Di lingkungan perguruan tinggi, pembentukan karakter tidak hanya berlangsung di dalam ruang kuliah yang formal. Ruang publik kampus seperti kantin justru menjadi cermin kejujuran, kedisiplinan, dan etika sosial mahasiswa sehari-hari. Hadirnya Kantin Satria Wimaya di kampus UPN "Veteran" Jawa Timur bukan sekadar pembaruan fasilitas kuliner, melainkan laboratorium sosial pembentukan karakter generasi muda.',
+      },
+      {
+        type: 'heading',
+        text: 'Budaya Tertib dan Menghargai Hak Sesama',
+      },
+      {
+        type: 'paragraph',
+        text: 'Pemandangan antrean rapi di setiap tenant makanan dan kebiasaan membersihkan meja secara mandiri (self-clearing) menjadi bukti bahwa nilai bela negara hidup dalam hal-hal sederhana. Disiplin mengantre mencerminkan penghormatan terhadap hak orang lain, sementara kebiasaan membuang sisa makanan pada tempatnya menunjukkan tanggung jawab moral terhadap fasilitas bersama.',
+      },
+      {
+        type: 'quote',
+        text: 'Karakter kebangsaan seseorang tidak diukur dari tingginya gelar akademis, melainkan dari kesediaannya menghargai antrean dan menjaga kebersihan ruang bersama.',
+        author: 'Catatan Etika Kampus',
+      },
+      {
+        type: 'paragraph',
+        text: 'Ruang interaksi yang bersih, nyaman, dan inklusif di Kantin Satria Wimaya mempertemukan mahasiswa dari berbagai jurusan dan angkatan. Di tempat inilah dialog gagasan, diskusi tugas kelompok, dan persahabatan kebangsaan terjalin secara alami tanpa memandang latar belakang kesukuan maupun kedaerahan.',
+      },
+      {
+        type: 'highlight',
+        text: 'Refleksi Harian: Membela negara dimulai dari merawat adab di tempat umum. Tertib, jujur saat bertransaksi, dan menjaga kebersihan adalah cermin sejati mahasiswa berkarakter Bela Negara.',
+      },
+    ],
+  },
+  {
+    id: 'kedaulatan-pangan-lokal',
+    slug: 'kedaulatan-pangan-lokal-eksplorasi-inovasi-pertanian-mahasiswa-untuk-ketahanan-nasional',
+    title: 'Kedaulatan Pangan Lokal: Eksplorasi Inovasi Pertanian Mahasiswa untuk Ketahanan Nasional',
+    category: 'Lingkungan',
+    date: '12 November 2026',
+    readTime: '3 menit baca',
+    image: '/images/pangan-lokal.jpg',
+    imageCaption: 'Pengembangan produk pangan lokal dan pertanian presisi berbasis teknologi sebagai pilar ketahanan pangan Indonesia.',
+    excerpt: 'Ketergantungan pangan pada impor adalah ancaman nyata kedaulatan bangsa. Mahasiswa berinovasi mengangkat potensi komoditas pangan lokal sebagai benteng ketahanan nasional.',
+    tags: ['Ketahanan Pangan', 'Inovasi Pertanian', 'Pangan Lokal', 'Kemandirian Bangsa'],
+    author: defaultAuthor,
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Sebuah bangsa tidak akan pernah merdeka sepenuhnya jika urusan perut dan ketersediaan pangannya masih sangat bergantung pada belas kasihan negara lain. Di tengah ketidakpastian iklim global dan disrupsi rantai pasok dunia, ketahanan pangan telah bergeser menjadi isu strategis pertahanan dan kedaulatan nasional.',
+      },
+      {
+        type: 'heading',
+        text: 'Hilirisasi Riset dan Keberpihakan pada Petani',
+      },
+      {
+        type: 'paragraph',
+        text: 'Melalui kolaborasi lintas keilmuan antara mahasiswa teknologi informasi, pertanian, dan ekonomi, berbagai inovasi mulai dirintis. Mulai dari sistem monitoring kelembapan tanah berbasis Internet of Things (IoT), platform rantai pasok cerdas yang memotong rantai tengkulak, hingga diversifikasi olahan pangan non-beras berbasis umbi-umbian lokal.',
+      },
+      {
+        type: 'quote',
+        text: 'Membeli dan mengonsumsi produk tani lokal bukan sekadar pilihan gaya hidup, melainkan tindakan nyata memperkuat ketahanan ekonomi petani dan kedaulatan bangsa.',
+        author: 'Komitmen Ketahanan Pangan',
+      },
+      {
+        type: 'paragraph',
+        text: 'Ketika generasi muda bangga mengonsumsi pangan lokal dan terlibat aktif dalam memodernisasi sektor pertanian, fondasi kemandirian bangsa akan berdiri kokoh. Inilah bentuk bela negara yang berdampak langsung pada kesejahteraan rakyat.',
+      },
+      {
+        type: 'highlight',
+        text: 'Pilar Ketahanan: Menjaga kedaulatan pangan adalah menjaga eksistensi Republik. Setiap riset dan kepedulian pada petani lokal adalah sumbangsih nyata pembelaan negara.',
+      },
+    ],
+  },
+  {
+    id: 'menghidupkan-bhinneka-tunggal-ika',
+    slug: 'menghidupkan-bhinneka-tunggal-ika-di-kamar-kos-dan-ruang-diskusi-kampus',
+    title: 'Menghidupkan Bhinneka Tunggal Ika di Kamar Kos dan Ruang Diskusi Kampus',
+    category: 'Wawasan Kebangsaan',
+    date: '5 November 2026',
+    readTime: '3 menit baca',
+    image: '/images/kolaborasi-kebangsaan.jpg',
+    imageCaption: 'Kolaborasi dan persaudaraan mahasiswa dari berbagai latar belakang budaya di ruang diskusi perkuliahan.',
+    excerpt: 'Surabaya sebagai kota pendidikan menjadi miniatur Indonesia. Di lingkungan indekos dan kerja kelompok kampus, toleransi dan solidaritas antar suku diuji dan dirawat setiap hari.',
+    tags: ['Bhinneka Tunggal Ika', 'Toleransi', 'Mahasiswa Rantau', 'Persatuan Nasional'],
+    author: defaultAuthor,
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Kampus UPN "Veteran" Jawa Timur di Surabaya dihuni oleh ribuan mahasiswa yang datang dari berbagai pelosok tanah air: dari ujung barat Sumatra hingga tanah Papua. Keberagaman ini adalah kekayaan sekaligus ujian kedewasaan dalam berbangsa. Menghidupkan Bhinneka Tunggal Ika tidak cukup lewat hafalan teks undang-undang, melainkan diwujudkan dalam dinamika keseharian.',
+      },
+      {
+        type: 'heading',
+        text: 'Belajar Mendengarkan di Tengah Perbedaan',
+      },
+      {
+        type: 'paragraph',
+        text: 'Di dalam tugas kelompok perkuliahan dan pergaulan di rumah indekos, mahasiswa belajar beradaptasi dengan beragam dialek, adat istiadat, dan perspektif kultural. Kemampuan untuk menahan diri, menghargai perbedaan keyakinan saat jam ibadah tiba, dan saling membantu ketika ada rekan rantau yang sakit adalah bentuk solidaritas kebangsaan yang paling murni.',
+      },
+      {
+        type: 'quote',
+        text: 'Persatuan Indonesia tidak lahir dari keseragaman, melainkan dari keberanian untuk saling merangkul di tengah indahnya perbedaan.',
+        author: 'Refleksi Keberagaman Mahasiswa',
+      },
+      {
+        type: 'paragraph',
+        text: 'Di tengah maraknya polarisasi sosial dan politik identitas di media sosial, generasi muda kampus harus menjadi teladan perekat persaudaraan. Ruang diskusi kampus harus tetap menjadi tempat yang aman bagi pertukaran gagasan yang sehat tanpa cemooh atau prasangka kesukuan.',
+      },
+      {
+        type: 'highlight',
+        text: 'Simpulan Kebangsaan: Merawat persatuan bangsa dimulai dari meja belajar dan lingkaran pertemanan kita. Menghargai kawan adalah bukti cinta tanah air yang tak terbantahkan.',
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
@@ -294,10 +400,4 @@ export function getArticlesByCategory(category: string): Article[] {
   return articles.filter(
     (a) => a.category.toLowerCase() === category.toLowerCase()
   );
-}
-
-export function getPopularArticles(): Article[] {
-  return [...articles]
-    .filter((a) => a.popularRank !== undefined)
-    .sort((a, b) => (a.popularRank || 99) - (b.popularRank || 99));
 }
