@@ -128,7 +128,7 @@ export const articles: Article[] = [
     date: '2 Nov 2026',
     readTime: '3 menit baca',
     image: '/images/outbound-bela-negara.jpg',
-    imageCaption: 'Suasana dinamika kelompok dan latihan kepemimpinan mahasiswa UPN "Veteran" Jawa Timur dalam kegiatan Outbound Bela Negara.',
+    imageCaption: 'Foto bersama seluruh mahasiswa dan instruktur praktikum Outbound Bela Negara UPN "Veteran" Jawa Timur dengan seragam lapangan lengkap.',
     excerpt: 'Di UPN "Veteran" Jawa Timur, praktikum Bela Negara tidak berhenti di kelas. Lewat outbound, nilai yang biasanya dihafal harus benar-benar dipraktikkan.',
     tags: ['Outbound', 'Karakter', 'Disiplin', 'Kerjasama Tim', 'Kampus Bela Negara'],
     popularRank: 1,
@@ -162,6 +162,11 @@ export const articles: Article[] = [
       {
         type: 'paragraph',
         text: 'Kebugaran fisik dan ketahanan mental adalah modal dasar seorang pembela negara. Rasa lelah, haus, dan tekanan waktu melatih mahasiswa untuk tidak mudah menyerah di tengah jalan. Disiplin waktu dan kepatuhan pada instruksi regu menjadi cerminan kepatuhan pada hukum dan norma kemasyarakatan dalam kehidupan bernegara.',
+      },
+      {
+        type: 'image',
+        src: '/images/outbound-bela-negara-lapangan.jpg',
+        caption: 'Simulasi dinamika kelompok dan latihan kekompakan formasi regu di lapangan terbuka.',
       },
       {
         type: 'paragraph',
