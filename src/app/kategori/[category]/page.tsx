@@ -3,7 +3,6 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { articles } from '@/data/articles';
 import ArticleCard from '@/components/ArticleCard';
-import { ArrowLeft, Layers, BookOpen } from 'lucide-react';
 
 const categoryMap: Record<string, { title: string; desc: string }> = {
   'wawasan-kebangsaan': {
@@ -63,57 +62,37 @@ export default async function CategoryPage({
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      {/* Breadcrumb */}
-      <nav aria-label="Navigasi Jejak" className="flex items-center gap-2 text-xs text-ink-500 mb-8">
-        <Link href="/" className="hover:text-patriot-800 flex items-center gap-1 transition-colors font-medium">
-          <ArrowLeft className="w-3.5 h-3.5" />
-          Beranda Utama
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+      {/* Navigation Link Back */}
+      <div className="mb-6">
+        <Link
+          href="/"
+          className="text-xs font-semibold text-emerald-900 hover:underline"
+        >
+          &larr; Kembali ke Semua Artikel
         </Link>
-        <span>/</span>
-        <span className="text-ink-600">Rubrik Khusus</span>
-        <span>/</span>
-        <span className="text-patriot-900 font-bold">{catInfo.title}</span>
-      </nav>
+      </div>
 
       {/* Category Header */}
-      <header className="bg-gradient-to-r from-patriot-900 via-patriot-800 to-patriot-950 text-white rounded-2xl p-8 sm:p-12 mb-12 shadow-md relative overflow-hidden">
-        <div className="relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-patriot-200 bg-patriot-700/60 border border-patriot-500/40 mb-4">
-            <Layers className="w-3.5 h-3.5 text-patriot-300" />
-            Rubrik Sivitas Bela Negara
-          </div>
-          <h1 className="font-serif font-bold text-3xl sm:text-5xl mb-4 leading-tight">
-            {catInfo.title}
-          </h1>
-          <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-2xl">
-            {catInfo.desc}
-          </p>
-          <div className="mt-6 flex items-center gap-2 text-xs text-patriot-300 font-medium">
-            <BookOpen className="w-4 h-4" />
-            <span>Memuat {categoryArticles.length} artikel terbitan</span>
-          </div>
-        </div>
+      <header className="pb-6 mb-8 border-b border-gray-200">
+        <h1 className="font-serif text-3xl font-bold text-gray-900 mb-2">
+          {catInfo.title}
+        </h1>
+        <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
+          {catInfo.desc}
+        </p>
       </header>
 
-      {/* Articles Grid */}
+      {/* Articles List */}
       {categoryArticles.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="divide-y divide-gray-100">
           {categoryArticles.map((article) => (
             <ArticleCard key={article.id} article={article} />
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-          <p className="text-ink-600 mb-4">
-            Belum ada artikel tambahan untuk kategori ini.
-          </p>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-patriot-800 text-white font-semibold rounded-lg text-sm hover:bg-patriot-900 transition-colors shadow"
-          >
-            Kembali ke Beranda
-          </Link>
+        <div className="py-12 text-center text-sm text-gray-500">
+          Belum ada artikel tambahan untuk rubrik ini.
         </div>
       )}
     </div>
