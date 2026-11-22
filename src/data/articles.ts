@@ -49,6 +49,11 @@ export const articles: Article[] = [
         text: 'Destinasi berikutnya adalah fasilitas jaringan telekomunikasi Indosat Ooredoo Hutchison. Di sini, mahasiswa diajak memahami bagaimana data mengalir melintasi pulau, mengamankan lalu lintas transaksi perbankan, sistem pemerintahan, hingga komunikasi jutaan warga. Ketahanan jaringan telekomunikasi terbukti bukan sekadar urusan bisnis korporasi, melainkan urat nadi pertahanan dan stabilitas ekonomi nasional yang wajib dijaga dari ancaman siber.',
       },
       {
+        type: 'image',
+        src: '/images/studi-ekskursi-indosat.jpg',
+        caption: 'Kunjungan dan sesi foto bersama mahasiswa Informatika UPN "Veteran" Jawa Timur di fasilitas Indosat Ooredoo Hutchison.',
+      },
+      {
         type: 'paragraph',
         text: 'Bagi mahasiswa Informatika yang menyandang identitas Kampus Bela Negara, kegiatan ekskursi ini membuka mata bahwa baris kode, arsitektur jaringan yang aman, dan algoritma cerdas yang mereka bangun di laboratorium perkuliahan kelak adalah pilar benteng pertahanan bangsa di era digital.',
       },
