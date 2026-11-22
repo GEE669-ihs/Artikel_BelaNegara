@@ -88,6 +88,11 @@ export const articles: Article[] = [
         text: 'Di dalam museum, rekaman suara pidato Bung Tomo yang menggelegar dan diorama pertempuran rakyat menyambut setiap pengunjung. Senjata-senjata peninggalan perjuangan, foto dokumentasi para syuhada kemerdekaan, hingga peninggalan pribadi para pejuang memperlihatkan betapa mahalnya harga sebuah kedaulatan. Para pejuang masa itu mengorbankan masa muda, kenyamanan, bahkan nyawa demi memastikan generasi penerus dapat hidup di bawah naungan negeri yang merdeka.',
       },
       {
+        type: 'image',
+        src: '/images/museum-sepuluh-nopember-interior.jpg',
+        caption: 'Monumen perjuangan dan diorama heroisme pertempuran rakyat Surabaya di lantai utama Museum Sepuluh Nopember.',
+      },
+      {
         type: 'quote',
         text: 'Bangsa yang besar adalah bangsa yang tidak pernah melupakan tetesan keringat dan darah para perintis kemerdekaannya.',
         author: 'Catatan Kunjungan Sejarah',
