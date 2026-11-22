@@ -67,31 +67,34 @@ export default async function CategoryPage({
       <div className="mb-6">
         <Link
           href="/"
-          className="text-xs font-semibold text-emerald-900 hover:underline"
+          className="text-xs font-semibold text-bottle-800 hover:text-bottle-950 transition-colors"
         >
           &larr; Kembali ke Semua Artikel
         </Link>
       </div>
 
       {/* Category Header */}
-      <header className="pb-6 mb-8 border-b border-gray-200">
-        <h1 className="font-serif text-3xl font-bold text-gray-900 mb-2">
+      <header className="pb-6 mb-8 border-b border-bottle-900/10">
+        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-bottle-800 block mb-1.5">
+          Rubrik Khusus
+        </span>
+        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-bottle-950 mb-2">
           {catInfo.title}
         </h1>
-        <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
+        <p className="text-sm text-ink-600 leading-relaxed max-w-2xl font-serif">
           {catInfo.desc}
         </p>
       </header>
 
       {/* Articles List */}
       {categoryArticles.length > 0 ? (
-        <div className="divide-y divide-gray-100">
+        <div className="divide-y divide-bottle-900/10">
           {categoryArticles.map((article) => (
             <ArticleCard key={article.id} article={article} />
           ))}
         </div>
       ) : (
-        <div className="py-12 text-center text-sm text-gray-500">
+        <div className="py-12 text-center text-sm text-ink-500 font-serif italic">
           Belum ada artikel tambahan untuk rubrik ini.
         </div>
       )}

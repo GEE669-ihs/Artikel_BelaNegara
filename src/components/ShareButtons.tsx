@@ -51,26 +51,26 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
   };
 
   return (
-    <div className="pt-6 border-t border-gray-200 text-xs text-gray-500 flex flex-wrap items-center gap-2 sm:gap-3">
-      <span className="font-semibold text-gray-700">Bagikan:</span>
+    <div className="pt-6 border-t border-bottle-900/10 text-xs text-ink-500 flex flex-wrap items-center gap-2 sm:gap-3">
+      <span className="font-semibold text-bottle-900 mr-1">Bagikan:</span>
       <button
         type="button"
         onClick={shareToWhatsApp}
-        className="px-3 py-1.5 rounded border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors font-medium"
+        className="px-3 py-1.5 rounded border border-bottle-900/20 text-bottle-950 hover:bg-bottle-50 hover:border-bottle-800 transition-colors font-medium"
       >
         WhatsApp
       </button>
       <button
         type="button"
         onClick={shareToFacebook}
-        className="px-3 py-1.5 rounded border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors font-medium"
+        className="px-3 py-1.5 rounded border border-bottle-900/20 text-bottle-950 hover:bg-bottle-50 hover:border-bottle-800 transition-colors font-medium"
       >
         Facebook
       </button>
       <button
         type="button"
         onClick={shareToTwitter}
-        className="px-3 py-1.5 rounded border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors font-medium"
+        className="px-3 py-1.5 rounded border border-bottle-900/20 text-bottle-950 hover:bg-bottle-50 hover:border-bottle-800 transition-colors font-medium"
       >
         X (Twitter)
       </button>
@@ -79,8 +79,8 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
         onClick={copyToClipboard}
         className={`px-3 py-1.5 rounded border transition-colors font-medium ${
           copied
-            ? 'bg-emerald-50 border-emerald-600 text-emerald-800'
-            : 'border-gray-300 text-gray-700 hover:bg-gray-50'
+            ? 'bg-bottle-100 border-bottle-800 text-bottle-950 font-semibold'
+            : 'border-bottle-900/20 text-bottle-950 hover:bg-bottle-50 hover:border-bottle-800'
         }`}
       >
         {copied ? 'Tautan Tersalin' : 'Salin Tautan'}
@@ -88,8 +88,8 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
       <button
         type="button"
         onClick={printArticle}
-        className="px-3 py-1.5 rounded border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors font-medium"
-        title="Cetak artikel atau simpan sebagai file PDF"
+        className="px-3 py-1.5 rounded border border-bottle-900/20 text-bottle-950 hover:bg-bottle-50 hover:border-bottle-800 transition-colors font-medium"
+        title="Cetak artikel atau simpan sebagai dokumen PDF"
       >
         Cetak / PDF
       </button>

@@ -22,7 +22,7 @@ export default function ReadingProgressBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 h-1 bg-patriot-600 z-50 transition-all duration-150 ease-out"
+      className="fixed top-0 left-0 h-[3px] bg-bottle-900 z-50 transition-all duration-150 ease-out print:hidden"
       style={{ width: `${completion}%` }}
       role="progressbar"
       aria-valuenow={completion}

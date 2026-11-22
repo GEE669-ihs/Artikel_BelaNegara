@@ -8,33 +8,43 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        patriot: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
-          950: '#052e16',
+        bottle: {
+          50: '#f2f8f5',
+          100: '#e1efe8',
+          200: '#c3dfd2',
+          300: '#98c7b3',
+          400: '#67a88f',
+          500: '#438b72',
+          600: '#2e705b',
+          700: '#255949',
+          800: '#1f483c',
+          900: '#153a30', // Hijau Botol Klasik
+          950: '#0a231d', // Hijau Botol Pekat
         },
-        paper: '#faf9f5',
+        paper: '#fbfaf8',
         ink: {
-          900: '#111827',
-          800: '#1f2937',
-          700: '#374151',
-          600: '#4b5563',
-          500: '#6b7280',
-        }
+          900: '#181b1a',
+          800: '#2a2f2d',
+          700: '#3e4542',
+          600: '#5a635f',
+          500: '#757e7a',
+          400: '#9ca3af',
+        },
       },
       fontFamily: {
         serif: ['Georgia', 'Cambria', '"Times New Roman"', 'serif'],
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        sans: [
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+        ],
       },
     },
   },
   plugins: [],
-}
+};
