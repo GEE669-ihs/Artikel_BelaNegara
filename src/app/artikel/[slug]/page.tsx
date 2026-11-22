@@ -27,7 +27,7 @@ export async function generateMetadata({
   if (!article) return { title: 'Artikel Tidak Ditemukan' };
 
   return {
-    title: `${article.title} | Sivitas Bela Negara`,
+    title: `${article.title} | Artikel Bela Negara`,
     description: article.excerpt,
     openGraph: {
       title: article.title,
@@ -74,8 +74,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
         {/* Article Header */}
         <header className="mb-8">
-          <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-bottle-800 mb-2.5">
-            Rubrik: {article.category}
+          <div className="text-[11px] font-bold uppercase tracking-wider text-bottle-800 mb-2.5">
+            Kategori: {article.category}
           </div>
 
           <h1 className="font-serif text-3xl sm:text-4xl md:text-[2.75rem] font-bold text-bottle-950 leading-[1.2] mb-4">
@@ -86,20 +86,19 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             &ldquo;{article.excerpt}&rdquo;
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-500 pt-4 border-t border-bottle-900/10">
+          <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-500 pt-4 border-t border-bottle-900/10">
             <span className="font-semibold text-bottle-950">{article.author.name}</span>
-            <span>•</span>
+            <span>,</span>
             <span>{article.author.institution}</span>
-            <span>•</span>
+            <span>,</span>
             <span>{article.date}</span>
-            <span>•</span>
-            <span className="font-medium text-bottle-800">{article.readTime}</span>
+            <span className="text-bottle-800 font-medium">({article.readTime})</span>
           </div>
         </header>
 
         {/* Main Photograph */}
         <figure className="mb-10">
-          <div className="relative aspect-[16/10] w-full rounded-md overflow-hidden bg-bottle-50 border border-bottle-900/10">
+          <div className="relative aspect-[16/10] w-full rounded bg-bottle-50 border border-bottle-900/10 overflow-hidden">
             <Image
               src={article.image}
               alt={article.title}
@@ -141,19 +140,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
         {/* Related Articles with Thumbnails */}
         <section className="mt-16 pt-10 border-t border-bottle-900/10 print:hidden">
-          <div className="flex items-center gap-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-bottle-800" />
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-bottle-950">
-              Artikel Terkait Lainnya
-            </h3>
-          </div>
+          <h3 className="font-serif text-xl sm:text-2xl font-bold text-bottle-950 mb-6">
+            Artikel Terkait Lainnya
+          </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {relatedArticles.map((rel) => (
               <div key={rel.id} className="group flex flex-col space-y-2.5">
                 <Link
                   href={`/artikel/${rel.slug}`}
-                  className="block relative aspect-[16/10] w-full rounded-md overflow-hidden bg-bottle-50 border border-bottle-900/10"
+                  className="block relative aspect-[16/10] w-full rounded bg-bottle-50 border border-bottle-900/10 overflow-hidden"
                 >
                   <Image
                     src={rel.image}

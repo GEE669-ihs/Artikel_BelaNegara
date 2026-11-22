@@ -5,12 +5,12 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://belanegara-media.vercel.app'),
-  title: 'Sivitas Bela Negara | Jurnal Independen Mahasiswa UPN Veteran Jatim',
+  title: 'Artikel Bela Negara | Mahasiswa UPN Veteran Jawa Timur',
   description:
-    'Portal warta dan jurnal independen aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
+    'Portal publikasi artikel dan dokumentasi aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
   keywords: [
     'Bela Negara',
-    'Sivitas Bela Negara',
+    'Artikel Bela Negara',
     'UPN Veteran Jawa Timur',
     'Informatika',
     'Wawasan Kebangsaan',
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     'Literasi Digital',
     'Lingkungan Hidup',
   ],
-  authors: [{ name: 'Mahasiswa Informatika UPN Veteran Jatim' }],
+  authors: [{ name: 'Gian Ridho Firdaus dan Dimas Rahmanda Alfarizi' }],
   openGraph: {
-    title: 'Sivitas Bela Negara | Jurnal Independen Mahasiswa',
+    title: 'Artikel Bela Negara | Mahasiswa UPN Veteran Jawa Timur',
     description:
-      'Portal warta dan jurnal independen aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
+      'Portal publikasi artikel dan dokumentasi aksi nyata nilai-nilai Bela Negara mahasiswa UPN Veteran Jawa Timur.',
     type: 'website',
     locale: 'id_ID',
   },
@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col bg-paper text-ink-900 selection:bg-patriot-100 selection:text-patriot-900">
+      <body className="min-h-screen flex flex-col bg-paper text-ink-900 selection:bg-bottle-200 selection:text-bottle-950">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -13,17 +13,16 @@ export default function ArticleCard({ article, priority = false }: ArticleCardPr
       <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 items-start justify-between">
         {/* Text Area */}
         <div className="flex-1 space-y-2.5">
-          <div className="flex items-center gap-2 text-xs text-ink-500">
-            <span className="font-semibold text-bottle-800 px-2 py-0.5 rounded bg-bottle-50 border border-bottle-200/60">
+          <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-500">
+            <span className="font-semibold text-bottle-800">
               {article.category}
             </span>
-            <span>•</span>
+            <span>,</span>
             <span>{article.date}</span>
-            <span>•</span>
-            <span>{article.readTime}</span>
+            <span className="text-ink-400">({article.readTime})</span>
           </div>
 
-          <h2 className="font-serif text-xl sm:text-[1.4rem] font-bold text-ink-900 leading-snug group-hover:text-bottle-800 transition-colors">
+          <h2 className="font-serif text-xl sm:text-[1.35rem] font-bold text-ink-900 leading-snug group-hover:text-bottle-800 transition-colors">
             <Link href={`/artikel/${article.slug}`}>
               {article.title}
             </Link>
@@ -45,7 +44,7 @@ export default function ArticleCard({ article, priority = false }: ArticleCardPr
         </div>
 
         {/* Image Thumbnail */}
-        <div className="w-full md:w-56 md:shrink-0 aspect-[16/10] relative rounded-md overflow-hidden bg-bottle-50 border border-bottle-900/10">
+        <div className="w-full md:w-56 md:shrink-0 aspect-[16/10] relative rounded bg-bottle-50 border border-bottle-900/10 overflow-hidden">
           <Link href={`/artikel/${article.slug}`}>
             <Image
               src={article.image}

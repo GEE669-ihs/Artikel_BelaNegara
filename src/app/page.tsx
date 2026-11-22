@@ -6,14 +6,11 @@ export default function HomePage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
       {/* Editorial Intro */}
       <div className="pb-8 mb-8 border-b border-bottle-900/10">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="w-2 h-2 rounded-full bg-bottle-800" />
-          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-bottle-800">
-            Arsip Publikasi Mahasiswa
-          </span>
-        </div>
+        <p className="text-[11px] font-bold uppercase tracking-wider text-bottle-800 mb-1">
+          Daftar Tulisan Mahasiswa
+        </p>
         <h2 className="font-serif text-2xl sm:text-3xl font-bold text-bottle-950 mb-2">
-          Daftar Tulisan &amp; Refleksi Lapangan
+          Kumpulan Artikel &amp; Dokumentasi
         </h2>
         <p className="text-sm text-ink-600 leading-relaxed max-w-2xl font-serif">
           Dokumentasi aksi dan kajian nilai-nilai bela negara mahasiswa Program Studi Informatika UPN &quot;Veteran&quot; Jawa Timur dalam berbagai dimensi pengabdian masyarakat dan sains.
