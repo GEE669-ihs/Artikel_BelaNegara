@@ -2,7 +2,7 @@ import { Article } from '@/types/article';
 
 const defaultAuthor = {
   name: 'Gian Ridho Firdaus dan Dimas Rahmanda Alfarizi',
-  role: 'Tim Redaksi Mahasiswa',
+  role: 'Tim Penulis Mahasiswa',
   institution: "Mahasiswa UPN 'Veteran' Jawa Timur, Surabaya",
 };
 
@@ -271,42 +271,50 @@ export const articles: Article[] = [
     ],
   },
   {
-    id: 'kantin-satria-wimaya',
-    slug: 'kantin-satria-wimaya-wajah-baru-ruang-interaksi-dan-karakter-mahasiswa-upn-jatim',
-    title: 'Kantin Satria Wimaya: Wajah Baru Ruang Interaksi dan Karakter Mahasiswa UPN Jatim',
-    category: 'Generasi Muda',
-    date: '15 November 2026',
+    id: 'kedaulatan-siber-dan-ai-nasional',
+    slug: 'kedaulatan-siber-dan-kecerdasan-buatan-benteng-pertahanan-strategis-indonesia',
+    title: 'Kedaulatan Siber dan Kecerdasan Buatan: Benteng Pertahanan Strategis Indonesia',
+    category: 'Digital',
+    date: '17 November 2026',
     readTime: '3 menit baca',
-    image: '/images/kantin-satria-wimaya.jpg',
-    imageCaption: 'Gedung Kantin Satria Wimaya UPN "Veteran" Jawa Timur sebagai ruang interaksi dan pembentukan karakter disiplin mahasiswa.',
-    excerpt: 'Kantin Satria Wimaya menjadi ruang temu sivitas akademika UPN Jatim. Di balik kenyamanan fasilitasnya, tersimpan ruang penempaan etika antre, kejujuran, dan kebersihan sebagai wujud dasar bela negara.',
-    tags: ['Kantin Satria Wimaya', 'Karakter Mahasiswa', 'Budaya Antre', 'Etika Kampus', 'Integritas'],
+    image: '/images/keamanan-siber-nasional.jpg',
+    imageCaption: 'Pusat operasi pertahanan jaringan dan analisis intelijen keamanan siber dalam memitigasi ancaman digital terhadap infrastruktur kritis nasional.',
+    excerpt: 'Perang modern abad ke-21 menempatkan ruang siber dan kecerdasan buatan sebagai garis depan pertahanan. Mengutip kajian Badan Siber dan Sandi Negara (BSSN), ketahanan infrastruktur digital memerlukan kemandirian talenta teknologi nasional.',
+    tags: ['Keamanan Siber', 'Kedaulatan Digital', 'BSSN', 'Kecerdasan Buatan', 'Informatika'],
     author: defaultAuthor,
     content: [
       {
         type: 'paragraph',
-        text: 'Di lingkungan perguruan tinggi, pembentukan karakter tidak hanya berlangsung di dalam ruang kuliah yang formal. Ruang publik kampus seperti kantin justru menjadi cermin kejujuran, kedisiplinan, dan etika sosial mahasiswa sehari-hari. Hadirnya Kantin Satria Wimaya di kampus UPN "Veteran" Jawa Timur bukan sekadar pembaruan fasilitas kuliner, melainkan laboratorium sosial pembentukan karakter generasi muda.',
+        text: 'Ruang pertahanan suatu negara tidak lagi terbatas pada matra darat, laut, dan udara. Matra kelima, yakni ruang siber (cyberspace), kini menjadi gelanggang pertempuran asimetris yang paling menentukan stabilitas nasional. Mengutip laporan berkala Badan Siber dan Sandi Negara (BSSN), Indonesia menghadapi ratusan juta anomali lalu lintas siber setiap tahunnya, yang menargetkan sektor perbankan, energi, kesehatan, dan basis data kependudukan.',
       },
       {
         type: 'heading',
-        text: 'Budaya Tertib dan Menghargai Hak Sesama',
+        text: 'Ancaman Perang Siber dan AI Berkecepatan Tinggi',
       },
       {
         type: 'paragraph',
-        text: 'Pemandangan antrean rapi di setiap tenant makanan dan kebiasaan membersihkan meja secara mandiri (self-clearing) menjadi bukti bahwa nilai bela negara hidup dalam hal-hal sederhana. Disiplin mengantre mencerminkan penghormatan terhadap hak orang lain, sementara kebiasaan membuang sisa makanan pada tempatnya menunjukkan tanggung jawab moral terhadap fasilitas bersama.',
+        text: 'Perkembangan teknologi kecerdasan buatan (artificial intelligence) membawa babak baru dalam lanskap geopolitik dunia. AI kini digunakan oleh berbagai aktor negara maupun non-negara untuk melancarkan serangan siber otomatis, deepfake profiling, serta eksfiltrasi data intelijen. Ketergantungan infrastruktur digital nasional pada produk piranti lunak asing dapat menjadi celah kerentanan fatal jika tidak diimbangi oleh penguasaan teknologi mandiri.',
       },
       {
         type: 'quote',
-        text: 'Karakter kebangsaan seseorang tidak diukur dari tingginya gelar akademis, melainkan dari kesediaannya menghargai antrean dan menjaga kebersihan ruang bersama.',
-        author: 'Catatan Etika Kampus',
+        text: 'Kedaulatan sebuah bangsa di era kecerdasan buatan diukur dari kemampuannya mengamankan data dan memproduksi teknologinya sendiri, bukan sekadar menjadi konsumen pasif.',
+        author: 'Kajian Strategis Pertahanan Siber',
+      },
+      {
+        type: 'heading',
+        text: 'Panggilan Pengabdian Mahasiswa Informatika',
       },
       {
         type: 'paragraph',
-        text: 'Ruang interaksi yang bersih, nyaman, dan inklusif di Kantin Satria Wimaya mempertemukan mahasiswa dari berbagai jurusan dan angkatan. Di tempat inilah dialog gagasan, diskusi tugas kelompok, dan persahabatan kebangsaan terjalin secara alami tanpa memandang latar belakang kesukuan maupun kedaerahan.',
+        text: 'Di sinilah letak relevansi tertinggi mahasiswa Program Studi Informatika UPN "Veteran" Jawa Timur sebagai sivitas akademika Kampus Bela Negara. Mempelajari rekayasa perangkat lunak, kriptografi, arsitektur komputasi awan, dan machine learning bukan hanya urusan mengejar nilai indeks prestasi, melainkan ikhtiar membangun benteng kedaulatan data tanah air.',
+      },
+      {
+        type: 'paragraph',
+        text: 'Bela negara masa kini adalah kesediaan menjadi insinyur teknologi yang jujur, beretika tinggi, dan mendedikasikan barisan kodenya untuk melindungi hak privasi rakyat serta kedaulatan sistem elektronik nusantara.',
       },
       {
         type: 'highlight',
-        text: 'Refleksi Harian: Membela negara dimulai dari merawat adab di tempat umum. Tertib, jujur saat bertransaksi, dan menjaga kebersihan adalah cermin sejati mahasiswa berkarakter Bela Negara.',
+        text: 'Kesimpulan Strategis: Kedaulatan siber adalah harga mati di era digital. Membangun pertahanan siber yang mandiri adalah wujud nyata patriotisme generasi muda teknologi.',
       },
     ],
   },
